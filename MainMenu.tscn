@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bque2v1tb7hgq"]
+
+[ext_resource type="Script" uid="uid://dxbn75l7ao7jg" path="res://main_menu.gd" id="1_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://bjytudpu17fu4" path="res://deep-space-nebula-with-shining-star-cluster-and-cosmic-dust-for-sci-fi-backgrounds-photo.jpeg" id="2_h7a2f"]
+[ext_resource type="Texture2D" uid="uid://0jxiunsesee6" path="res://Gemini_Generated_Image_sb80rvsb80rvsb80.jpg" id="3_cqjrg"]
+[ext_resource type="Texture2D" uid="uid://rg5yftjsrnj2" path="res://start_game-removebg-preview.png" id="4_e2xy7"]
+[ext_resource type="Texture2D" uid="uid://cot2yv4s651mh" path="res://start_game_2-removebg-preview.png" id="5_fimr5"]
+[ext_resource type="Texture2D" uid="uid://dpl0ii7vd8qe1" path="res://quit-removebg-preview (1).png" id="6_cqjrg"]
+[ext_resource type="Texture2D" uid="uid://bay00821aykov" path="res://quit2-removebg-preview (1).png" id="7_e2xy7"]
+
+[node name="Main Menu" type="Node2D" unique_id=1555390325]
+script = ExtResource("1_eiy7p")
+
+[node name="DeepSpaceNebulaWithShiningStarClusterAndCosmicDustForSciFiBackgroundsPhoto" type="Sprite2D" parent="." unique_id=1722255555]
+position = Vector2(573.87506, 321.74997)
+scale = Vector2(1.8628, 1.8185714)
+texture = ExtResource("2_h7a2f")
+
+[node name="GeminiGeneratedImageSb80Rvsb80Rvsb80" type="Sprite2D" parent="." unique_id=1210021151]
+position = Vector2(577.00006, 249.00002)
+scale = Vector2(0.86254025, 0.8756794)
+texture = ExtResource("3_cqjrg")
+
+[node name="Label" type="Label" parent="." unique_id=191639997]
+offset_left = 1068.0
+offset_top = 3.0
+offset_right = 1144.0
+offset_bottom = 26.0
+text = "BY ANAEL"
+
+[node name="Node" type="Node" parent="." unique_id=192377046]
+
+[node name="Start" type="TextureButton" parent="Node" unique_id=1939122569]
+anchors_preset = -1
+anchor_right = 0.15400001
+offset_left = 81.0
+offset_top = 443.0
+offset_right = 340.2965
+offset_bottom = 565.0
+texture_normal = ExtResource("4_e2xy7")
+texture_pressed = ExtResource("5_fimr5")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Quit" type="TextureButton" parent="Node" unique_id=684174627]
+anchors_preset = -1
+anchor_right = 0.037
+anchor_bottom = 0.079
+offset_left = 631.0
+offset_top = 443.0
+offset_right = 1025.376
+offset_bottom = 514.808
+texture_normal = ExtResource("6_cqjrg")
+texture_pressed = ExtResource("7_e2xy7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="Node/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Node/Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://buq2xq31h76gx"]
+
+[ext_resource type="Texture2D" uid="uid://bjytudpu17fu4" path="res://deep-space-nebula-with-shining-star-cluster-and-cosmic-dust-for-sci-fi-backgrounds-photo.jpeg" id="1_28vn7"]
+[ext_resource type="Script" uid="uid://cq0slmc5swryn" path="res://game_over.gd" id="1_k2vha"]
+[ext_resource type="Texture2D" uid="uid://rg5yftjsrnj2" path="res://start_game-removebg-preview.png" id="2_k2vha"]
+[ext_resource type="Texture2D" uid="uid://cot2yv4s651mh" path="res://start_game_2-removebg-preview.png" id="3_fkf4o"]
+[ext_resource type="Texture2D" uid="uid://dpl0ii7vd8qe1" path="res://quit-removebg-preview (1).png" id="5_k2vha"]
+[ext_resource type="Texture2D" uid="uid://ba3h8ag2rj46p" path="res://lost-removebg-preview.png" id="6_dd2jf"]
+[ext_resource type="Texture2D" uid="uid://bay00821aykov" path="res://quit2-removebg-preview (1).png" id="6_fkf4o"]
+
+[node name="Game over" type="Node2D" unique_id=1382431748]
+process_mode = 3
+script = ExtResource("1_k2vha")
+
+[node name="DeepSpaceNebulaWithShiningStarClusterAndCosmicDustForSciFiBackgroundsPhoto" type="Sprite2D" parent="." unique_id=1261073358]
+position = Vector2(632, 325.99997)
+scale = Vector2(2.0384, 1.9771427)
+texture = ExtResource("1_28vn7")
+
+[node name="Node" type="Node" parent="DeepSpaceNebulaWithShiningStarClusterAndCosmicDustForSciFiBackgroundsPhoto" unique_id=5092543]
+
+[node name="Start" type="TextureButton" parent="DeepSpaceNebulaWithShiningStarClusterAndCosmicDustForSciFiBackgroundsPhoto/Node" unique_id=518300410]
+anchors_preset = -1
+anchor_right = 0.15400001
+offset_left = 81.0
+offset_top = 408.0
+offset_right = 414.68488
+offset_bottom = 565.0
+texture_normal = ExtResource("2_k2vha")
+texture_pressed = ExtResource("3_fkf4o")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Quit" type="TextureButton" parent="DeepSpaceNebulaWithShiningStarClusterAndCosmicDustForSciFiBackgroundsPhoto/Node" unique_id=1453179334]
+anchors_preset = -1
+anchor_right = 0.037
+anchor_bottom = 0.079
+offset_left = 632.0
+offset_top = 415.0
+offset_right = 1099.0
+offset_bottom = 508.80798
+texture_normal = ExtResource("5_k2vha")
+texture_pressed = ExtResource("6_fkf4o")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="LostRemovebgPreview" type="Sprite2D" parent="." unique_id=2142973800]
+position = Vector2(572, 213)
+scale = Vector2(1.2246376, 1.2246376)
+texture = ExtResource("6_dd2jf")
+
+[connection signal="pressed" from="DeepSpaceNebulaWithShiningStarClusterAndCosmicDustForSciFiBackgroundsPhoto/Node/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="DeepSpaceNebulaWithShiningStarClusterAndCosmicDustForSciFiBackgroundsPhoto/Node/Quit" to="." method="_on_quit_pressed"]

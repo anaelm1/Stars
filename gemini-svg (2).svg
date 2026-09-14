@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90" width="300" height="90">
+  <defs>
+    <!-- Darker Pressed Red Gradient -->
+    <linearGradient id="red-metal-pressed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#800e13"/>
+      <stop offset="40%" stop-color="#540308"/>
+      <stop offset="100%" stop-color="#200003"/>
+    </linearGradient>
+
+    <!-- Dimmed Outer Frame -->
+    <linearGradient id="frame-grad-pressed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d63031"/>
+      <stop offset="100%" stop-color="#1e272e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Button Base / Shadow -->
+  <rect x="5" y="10" width="290" height="75" rx="14" fill="#000000"/>
+
+  <!-- Main Body Frame (Shifted down Y: 10px instead of 5px) -->
+  <rect x="5" y="10" width="290" height="72" rx="14" fill="#0d0305" stroke="url(#frame-grad-pressed)" stroke-width="2"/>
+
+  <!-- Inner Metallic Face (Darker & Pressed) -->
+  <rect x="12" y="17" width="276" height="58" rx="10" fill="url(#red-metal-pressed)" stroke="#9e0022" stroke-width="1"/>
+
+  <!-- Text (Shifted down Y: 56px) -->
+  <text x="150" y="56" fill="#d1d8e0" font-family="'Arial Black', 'Impact', sans-serif" font-size="32" font-weight="900" text-anchor="middle" letter-spacing="4">QUIT</text>
+</svg>

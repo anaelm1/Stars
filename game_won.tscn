@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://fnlcx0p7kq2"]
+
+[ext_resource type="Script" uid="uid://bbvxpcpjcgchs" path="res://game_won.gd" id="1_gebjg"]
+[ext_resource type="Texture2D" uid="uid://bjytudpu17fu4" path="res://deep-space-nebula-with-shining-star-cluster-and-cosmic-dust-for-sci-fi-backgrounds-photo.jpeg" id="1_n7w10"]
+[ext_resource type="Texture2D" uid="uid://rg5yftjsrnj2" path="res://start_game-removebg-preview.png" id="2_gebjg"]
+[ext_resource type="Texture2D" uid="uid://cot2yv4s651mh" path="res://start_game_2-removebg-preview.png" id="3_talic"]
+[ext_resource type="Texture2D" uid="uid://dpl0ii7vd8qe1" path="res://quit-removebg-preview (1).png" id="5_gebjg"]
+[ext_resource type="Texture2D" uid="uid://bay00821aykov" path="res://quit2-removebg-preview (1).png" id="6_talic"]
+[ext_resource type="Texture2D" uid="uid://cvlspqcwt1sqv" path="res://won-removebg-preview.png" id="6_xfvfw"]
+
+[node name="Game won" type="Node2D" unique_id=1112239319]
+script = ExtResource("1_gebjg")
+
+[node name="DeepSpaceNebulaWithShiningStarClusterAndCosmicDustForSciFiBackgroundsPhoto" type="Sprite2D" parent="." unique_id=1816362659]
+position = Vector2(632, 325.99997)
+scale = Vector2(2.0384, 1.9771427)
+texture = ExtResource("1_n7w10")
+
+[node name="Node" type="Node" parent="." unique_id=616909767]
+
+[node name="Start" type="TextureButton" parent="Node" unique_id=329759045]
+anchors_preset = -1
+anchor_right = 0.15400001
+offset_left = 81.0
+offset_top = 408.0
+offset_right = 414.68488
+offset_bottom = 565.0
+texture_normal = ExtResource("2_gebjg")
+texture_pressed = ExtResource("3_talic")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Quit" type="TextureButton" parent="Node" unique_id=549712553]
+anchors_preset = -1
+anchor_right = 0.037
+anchor_bottom = 0.079
+offset_left = 619.0
+offset_top = 412.0
+offset_right = 1086.0
+offset_bottom = 505.80798
+texture_normal = ExtResource("5_gebjg")
+texture_pressed = ExtResource("6_talic")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="LostRemovebgPreview" type="Sprite2D" parent="." unique_id=286716879]
+position = Vector2(572, 213)
+scale = Vector2(1.2246376, 1.2246376)
+texture = ExtResource("6_xfvfw")
+
+[connection signal="pressed" from="Node/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Node/Quit" to="." method="_on_quit_pressed"]
